@@ -1,0 +1,47 @@
+
+body {
+    text-align: center;
+    background: url("https://i0.wp.com/www.additudemag.com/wp-content/uploads/2020/09/GettyImages-1169974807-e1598994886421.jpg?resize=1280%2C720px&ssl=1");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(20, 17, 17);
+}
+
+.title {
+    margin-right: 650px;
+}
+
+.input-group {
+    max-width: 50%;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs {
+    display: flex;
+}
+
+.todolists {
+    margin-top: 30px;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    margin: 2.5px;
+}
+
+.item {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.form-check-input {
+    font-size: 2.2em;
+}
