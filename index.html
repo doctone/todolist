@@ -25,10 +25,8 @@
         <div class="container">
             <div class="row">
               <div class="col" id="low">
-                <span class="h4">Low priority </span>
               </div>
               <div class="col" id="high">
-                <span class="h4">High priority </span>
               </div>
             </div>
           </div>
@@ -37,12 +35,14 @@
 </div>
 </body>
 <script>
+    let completedTasks = []
+    let tasks = []
     function generateLowItem() {
         const value = document.getElementById("item").value;
         if (value == '') {
             return
         }
-        document.getElementById("low").innerHTML += `<button class="btn btn-success">${value}</button>`
+        document.getElementById("low").innerHTML += `<button class="btn btn-success" id="${value}" onclick="removeTodo(this.id)">${value} <input class="form-check-input" type="checkbox"> </button>`
         document.getElementById("item").value = ''
     }
     function generateHighItem() {
@@ -50,8 +50,21 @@
         if (value == '') {
             return
         }
-        document.getElementById("high").innerHTML += `<button class="btn btn-danger">${value}</button>`
+        document.getElementById("high").innerHTML += `<button class="btn btn-danger" id="${value}" onclick="removeTodo(this.id)">${value} <input class="form-check-input" type="checkbox"> </button>`
         document.getElementById("item").value = ''
     }
+
+    function removeTodo(event) {
+        document.getElementById(event).remove()
+        completedTasks.push(event)
+        }
+
+        //// Implement 'completed tasks' list
+
+        //// make checkboxes work
+
+        /// add 'clear all' button
+
+        /// add strikethrough on first click
 </script>
 </html>
