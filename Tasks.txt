@@ -1,0 +1,3 @@
+[x] clear button
+
+[] strikethrough on first click

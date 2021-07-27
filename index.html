@@ -17,7 +17,7 @@
     </div>
     <div class="input-group">
         <section class="inputs">
-        <input id="item" type="text" class="form-control" placeholder="Add item to do list" aria-label="Recipient's username with two button addons" required>
+        <input id="item" type="text" class="form-control" placeholder="Add item to your todo list" aria-label="Recipient's username with two button addons" required>
         <button class="btn btn-outline-secondary" type="button" onclick="generateLowItem()">Low priority</button>
         <button class="btn btn-outline-secondary" type="button" onclick="generateHighItem()">High priority</button>
         <button class="btn btn-outline-danger" onclick="clearItems()">Clear</button>
@@ -58,11 +58,17 @@
         document.getElementById("high").innerHTML += `<button class="btn btn-danger task" id="${value}" onclick="removeTodo(this.id)">${value}</button>`
         document.getElementById("item").value = ''
     }
-
+    // can't get this function to evaluate isClicked the first time round
     function removeTodo(event) {
+        if (completedTasks.includes(event)) {
         document.getElementById(event).remove()
-        completedTasks.push(event)
+         }
+         else {
+            completedTasks.push(event);
+            document.getElementById(event).innerHTML = `<strike>${document.getElementById(event).innerHTML}</strike>`
+
         }
+    }
 
     function clearItems() {
         document.getElementById("high").innerHTML = ''
@@ -78,13 +84,5 @@
         }
         
     }
-
-        //// Implement 'completed tasks' list
-
-        //// make checkboxes work
-
-        /// add 'clear all' button
-
-        /// add strikethrough on first click
 </script>
 </html>
