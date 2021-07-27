@@ -45,3 +45,12 @@ body {
 .form-check-input {
     margin: 10px;
 }
+
+#completed {
+
+}
+
+.fas {
+    color: red;
+    font-size: 1.6em;
+}
