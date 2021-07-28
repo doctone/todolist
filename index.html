@@ -34,6 +34,7 @@
              }
              else {
                 completedTasks.push(event);
+                document.getElementById(event).classList.add('clicked')
                 document.getElementById(event).innerHTML = `<strike>${document.getElementById(event).innerHTML}</strike>`
     
             }
