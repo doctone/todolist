@@ -48,7 +48,7 @@ body {
     margin: 10px;
 }
 
-#completed {
+.border1 {
     border: 2px solid black;
     border-radius: 20px;
 }
